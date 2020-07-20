@@ -25,6 +25,10 @@ export class TableSelection {
     this.group.forEach($el => $el.addClass(TableSelection.className))
   }
 
+  get selectedIds() {
+    return this.group.map($el => $el.id())
+  }
+
   selectCells($el) {
     const isSelected = $el.hasClass(TableSelection.className)
     if (isSelected ) {
@@ -33,5 +37,9 @@ export class TableSelection {
       this.group.push($el)
       this.group.forEach($el => $el.addClass(TableSelection.className))
     }
+  }
+
+  applyStyle(style) {
+    this.group.forEach($el => $el.css(style))
   }
 }
