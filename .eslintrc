@@ -15,7 +15,7 @@
     "quotes": "off",
     "operator-linebreak": "off",
     "no-trailing-spaces": "off",
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": "off", //["error", "windows"],
     "no-debugger": "off"
   },
   "plugins": ["jest"],
